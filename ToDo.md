@@ -11,7 +11,7 @@
   - [x] annual salary
   - [x] submit button
 - [x] Submit button collects the form info and stores it array
-- [ ] Append info to DOM in a table
+- [x] Append info to DOM in a table
 - [ ] Calculate monthly cost
   - [ ] append to DOM
 - [ ] If total monthly cost exceeds $20,000, make cell background red

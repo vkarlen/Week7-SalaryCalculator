@@ -26,6 +26,8 @@ function addEmployee(e) {
 
 function deleteEmployee() {
   console.log('in delete');
+
+  // delete employee line
 } // end deleteEmployees
 
 function emptyInputs() {
@@ -40,6 +42,7 @@ function emptyInputs() {
 
 function displayEmployees() {
   console.log('in display');
+
   // empty employee list
   // re add list of employees
   $('#employeeTable').empty();
@@ -55,4 +58,20 @@ function displayEmployees() {
       </td>
     </tr>`);
   }
-}
+  // calculate and update Monthly Cost
+  calculateMonthly();
+} // end displayEmployees
+
+function calculateMonthly() {
+  let monthlyCost = 0;
+
+  // add each salary to the total
+  for (people of employeeList) {
+    monthlyCost += Math.round(people.Salary / 12);
+  }
+  //console.log(monthlyCost);
+
+  // empty current total and append new one
+  $('#displayTotal').empty();
+  $('#displayTotal').append(`$${monthlyCost}`);
+} // end calculateMonthly
