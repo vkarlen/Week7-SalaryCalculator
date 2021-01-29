@@ -71,7 +71,15 @@ function calculateMonthly() {
   }
   //console.log(monthlyCost);
 
+  // If total monthly cost exceeds $20,000, make cell background red
+  if (monthlyCost > 20000) {
+    console.log('ouch');
+    $('#displayTotal').css('background-color', 'red');
+  } else {
+    $('#displayTotal').css('background-color', '');
+  }
+
   // empty current total and append new one
   $('#displayTotal').empty();
-  $('#displayTotal').append(`$${monthlyCost}`);
+  $('#displayTotal').append(`Total Monthly Cost: $${monthlyCost}`);
 } // end calculateMonthly
