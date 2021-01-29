@@ -19,7 +19,7 @@
 
 ## Stretch Goals
 
--[ ] Remove deleted employee's salary from the total. "This will require that the logic knows which element was removed. You will need to use `.text()` as a getter or look into jQuery's `.data()` function."
+- [ ] Remove deleted employee's salary from the total. "This will require that the logic knows which element was removed. You will need to use `.text()` as a getter or look into jQuery's `.data()` function."
 
 ## Do Later
 
