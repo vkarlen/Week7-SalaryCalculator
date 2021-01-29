@@ -10,7 +10,7 @@
   - [x] job title
   - [x] annual salary
   - [x] submit button
-- [ ] Submit button collects the form info and stores it array
+- [x] Submit button collects the form info and stores it array
 - [ ] Append info to DOM in a table
 - [ ] Calculate monthly cost
   - [ ] append to DOM

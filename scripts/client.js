@@ -1,12 +1,8 @@
-console.log('in js');
-
 $(document).ready(onReady);
 
 const employeeList = [];
 
 function onReady() {
-  console.log('lets do this');
-
   $('#submitButton').on('click', addEmployee);
   $(document).on('click', '.deleteButton', deleteEmployee);
 }
@@ -14,18 +10,18 @@ function onReady() {
 function addEmployee(e) {
   e.preventDefault();
 
-  console.log('in add');
-
-  const newEmployee = {
+  employeeList.push({
     FirstName: $('#fnInput').val(),
     LastName: $('#lnInput').val(),
     IDNum: Number($('#idInput').val()),
     Title: $('#titleInput').val(),
     Salary: Number($('#salaryInput').val()),
-  };
+  });
 
-  employeeList.push(newEmployee);
+  //console.log('in add');
+  //console.log(employeeList);
   emptyInputs();
+  displayEmployees();
 } // end addEmployee
 
 function deleteEmployee() {
@@ -33,7 +29,7 @@ function deleteEmployee() {
 } // end deleteEmployees
 
 function emptyInputs() {
-  console.log('in empty');
+  //console.log('in empty');
 
   $('#fnInput').val('');
   $('#lnInput').val('');
@@ -41,3 +37,22 @@ function emptyInputs() {
   $('#titleInput').val('');
   $('#salaryInput').val('');
 } // end emptyInputs
+
+function displayEmployees() {
+  console.log('in display');
+  // empty employee list
+  // re add list of employees
+  $('#employeeTable').empty();
+  for (person of employeeList) {
+    $('#employeeTable').append(`<tr>
+      <td>${person.FirstName}</td>
+      <td>${person.LastName}</td>
+      <td>${person.IDNum}</td>
+      <td>${person.Title}</td>
+      <td>${person.Salary}</td>
+      <td>
+        <button class="deleteButton">Delete</button>
+      </td>
+    </tr>`);
+  }
+}
