@@ -2,14 +2,14 @@
 
 ## Main Project
 
-- [ ] Create and source in HTML, CSS, JavaScript, and jQuery
-- [ ] Add input framework for employee info form
-  - [ ] first name
-  - [ ] last name
-  - [ ] ID number
-  - [ ] job title
-  - [ ] annual salary
-  - [ ] submit button
+- [x] Create and source in HTML, CSS, JavaScript, and jQuery
+- [x] Add input framework for employee info form
+  - [x] first name
+  - [x] last name
+  - [x] ID number
+  - [x] job title
+  - [x] annual salary
+  - [x] submit button
 - [ ] Submit button collects the form info and stores it array
 - [ ] Append info to DOM in a table
 - [ ] Calculate monthly cost
