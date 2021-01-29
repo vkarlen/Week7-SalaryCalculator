@@ -25,8 +25,19 @@ function addEmployee(e) {
   };
 
   employeeList.push(newEmployee);
-}
+  emptyInputs();
+} // end addEmployee
 
-function deleteEmployee(params) {
+function deleteEmployee() {
   console.log('in delete');
-}
+} // end deleteEmployees
+
+function emptyInputs() {
+  console.log('in empty');
+
+  $('#fnInput').val('');
+  $('#lnInput').val('');
+  $('#idInput').val('');
+  $('#titleInput').val('');
+  $('#salaryInput').val('');
+} // end emptyInputs
