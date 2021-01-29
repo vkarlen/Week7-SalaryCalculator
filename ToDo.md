@@ -2,14 +2,20 @@
 
 ## Main Project
 
--[ ] Create and source in HTML, CSS, JavaScript, and jQuery -[ ] Add input framework for employee info form
-[ ] first name
-[ ] last name
-[ ] ID number
-[ ] job title
-[ ] annual salary
-[ ] submit button -[ ] Submit button collects the form info and stores it array -[ ] Append info to DOM in a table -[ ] Calculate monthly cost
-[ ] append to DOM -[ ] If total monthly cost exceeds $20,000, make cell background red -[ ] Add delete button that removes an employee from the DOM -[ ]
+- [ ] Create and source in HTML, CSS, JavaScript, and jQuery
+- [ ] Add input framework for employee info form
+  - [ ] first name
+  - [ ] last name
+  - [ ] ID number
+  - [ ] job title
+  - [ ] annual salary
+  - [ ] submit button
+- [ ] Submit button collects the form info and stores it array
+- [ ] Append info to DOM in a table
+- [ ] Calculate monthly cost
+  - [ ] append to DOM
+- [ ] If total monthly cost exceeds $20,000, make cell background red
+- [ ] Add delete button that removes an employee from the DOM
 
 ## Stretch Goals
 
