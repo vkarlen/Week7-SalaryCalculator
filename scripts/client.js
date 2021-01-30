@@ -1,6 +1,8 @@
 $(document).ready(onReady);
 
 const employeeList = [];
+const monthlyMax = 20000;
+// setting max as variable in case it needs to be changed in the future
 
 function onReady() {
   $('#submitButton').on('click', addEmployee);
@@ -18,8 +20,7 @@ function addEmployee(e) {
     Salary: Number($('#salaryInput').val()),
   });
 
-  //console.log('in add');
-  //console.log(employeeList);
+  // empty inputs and update table
   emptyInputs();
   displayEmployees();
 } // end addEmployee
@@ -27,7 +28,16 @@ function addEmployee(e) {
 function deleteEmployee() {
   console.log('in delete');
 
-  // delete employee line
+  // find employee by their id in the array
+  for (i in employeeList) {
+    if (employeeList[i].IDNum === Number(this.value)) {
+      // delete employee from array
+      employeeList.splice(i, 1);
+    }
+  }
+
+  // update employee display
+  displayEmployees();
 } // end deleteEmployees
 
 function emptyInputs() {
@@ -54,7 +64,7 @@ function displayEmployees() {
       <td>${person.Title}</td>
       <td>${person.Salary}</td>
       <td>
-        <button class="deleteButton">Delete</button>
+        <button class="deleteButton" value="${person.IDNum}">Delete</button>
       </td>
     </tr>`);
   }
@@ -72,8 +82,7 @@ function calculateMonthly() {
   //console.log(monthlyCost);
 
   // If total monthly cost exceeds $20,000, make cell background red
-  if (monthlyCost > 20000) {
-    console.log('ouch');
+  if (monthlyCost > monthlyMax) {
     $('#displayTotal').css('background-color', 'red');
   } else {
     $('#displayTotal').css('background-color', '');
