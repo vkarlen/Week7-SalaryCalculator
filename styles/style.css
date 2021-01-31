@@ -1,12 +1,63 @@
-table,
-th,
+body {
+  background-color: #cfdac8;
+}
+
+table {
+  margin: 0 auto;
+  border: 2px solid black;
+  border-collapse: collapse;
+  background-color: #e8eae6;
+  width: 90%;
+}
+
 td {
   border: 1px solid black;
-  border-collapse: collapse;
+  text-align: center;
+  padding: 2px 4px;
+}
+
+th {
+  background-color: #4f6647;
+  color: white;
+  padding: 5px;
+  border: 1px solid black;
+  text-align: center;
+}
+
+tfoot {
+  background-color: #cdd0cb;
+  font-weight: bold;
+}
+
+h1,
+h2,
+h3 {
+  margin: 5px 0;
+  text-align: center;
+}
+
+h1 {
+  font-size: 30pt;
+  font-variant: small-caps;
+}
+
+.deleteCol {
+  width: 40px;
+}
+
+.nameCol {
+  width: 150px;
+  text-align: left;
 }
 
 #displayTotal {
-  padding: 10px;
-  border: 2px solid black;
-  display: inline-block;
+  background-color: #e8eae6;
+}
+
+#tableContainer,
+#inputContainer {
+  margin: 10px 10%;
+  padding: 10px 20px;
+  background-color: whitesmoke;
+  border: 1px solid rgb(20, 20, 20);
 }

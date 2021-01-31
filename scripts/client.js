@@ -1,10 +1,34 @@
 $(document).ready(onReady);
 
-const employeeList = [];
+const employeeList = [
+  {
+    FirstName: 'Charlie',
+    LastName: 'Kelly',
+    IDNum: 3,
+    Title: 'Janitor',
+    Salary: 53,
+  },
+  {
+    FirstName: 'Frank',
+    LastName: 'Renolds',
+    IDNum: 794,
+    Title: 'Troll',
+    Salary: 100000,
+  },
+  {
+    FirstName: 'Mac',
+    LastName: 'McDonald',
+    IDNum: 256,
+    Title: 'Security',
+    Salary: 40000,
+  },
+];
 const monthlyMax = 20000;
 // setting max as variable in case it needs to be changed in the future
 
 function onReady() {
+  displayEmployees();
+
   $('#submitButton').on('click', addEmployee);
   $(document).on('click', '.deleteButton', deleteEmployee);
 }
@@ -33,6 +57,7 @@ function deleteEmployee() {
     if (employeeList[i].IDNum === Number(this.value)) {
       // delete employee from array
       employeeList.splice(i, 1);
+      i = employeeList.length;
     }
   }
 
@@ -57,17 +82,21 @@ function displayEmployees() {
   // re add list of employees
   $('#employeeTable').empty();
   for (person of employeeList) {
+    console.log('inapp');
     $('#employeeTable').append(`<tr>
-      <td>${person.FirstName}</td>
-      <td>${person.LastName}</td>
+      <td class="nameCol">${person.FirstName}</td>
+      <td class="nameCol">${person.LastName}</td>
       <td>${person.IDNum}</td>
       <td>${person.Title}</td>
-      <td>${person.Salary}</td>
+      <td>$${person.Salary}</td>
       <td>
-        <button class="deleteButton" value="${person.IDNum}">Delete</button>
+        <button class="deleteButton" value="${person.IDNum}">X</button>
       </td>
     </tr>`);
   }
+  // showed John and a few others the dynamic value/id on the delete button
+  //  so that may show up on a few assignments
+
   // calculate and update Monthly Cost
   calculateMonthly();
 } // end displayEmployees
@@ -85,10 +114,10 @@ function calculateMonthly() {
   if (monthlyCost > monthlyMax) {
     $('#displayTotal').css('background-color', 'red');
   } else {
-    $('#displayTotal').css('background-color', '');
+    $('#displayTotal').css('background-color', '#e8eae6');
   }
 
   // empty current total and append new one
   $('#displayTotal').empty();
-  $('#displayTotal').append(`Total Monthly Cost: $${monthlyCost}`);
+  $('#displayTotal').append(`$${monthlyCost}`);
 } // end calculateMonthly

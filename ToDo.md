@@ -24,5 +24,5 @@
 
 ## Do Later
 
-- [ ] Clean up code
-- [ ] CSS stylings
+- [x] Clean up code
+- [x] CSS stylings
