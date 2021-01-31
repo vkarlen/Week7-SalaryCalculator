@@ -14,14 +14,14 @@
 
     <div id="inputContainer">
       <h3>Add Employee</h3>
-      <form>
-        <input type="text" placeholder="First Name" id="fnInput" />
-        <input type="text" placeholder="Last Name" id="lnInput" />
-        <input type="number" placeholder="ID Number" id="idInput" />
-        <input type="text" placeholder="Title" id="titleInput" />
-        <input type="number" placeholder="Annual Salary" id="salaryInput" />
+      <form id="empForm">
+        <input type="text" placeholder="First Name" id="fnInput" required/>
+        <input type="text" placeholder="Last Name" id="lnInput" required/>
+        <input type="number" placeholder="ID Number" id="idInput" required/>
+        <input type="text" placeholder="Title" id="titleInput" required/>
+        <input type="number" placeholder="Annual Salary" id="salaryInput" required/>
 
-        <input type="submit" id="submitButton" />
+        <input type="submit"/>
       </form>
     </div>
     <div id="tableContainer">
@@ -38,30 +38,6 @@
           </tr>
         </thead>
         <tbody id="employeeTable">
-          <!-- <tr>
-            <td>Charlie</td>
-            <td>Kelly</td>
-            <td>3</td>
-            <td>Janitor</td>
-            <td>$50</td>
-            <td><button class="deleteButton">Delete</button></td>
-          </tr>
-          <tr>
-            <td>Frank</td>
-            <td>Renolds</td>
-            <td>794</td>
-            <td>Troll</td>
-            <td>$100,000</td>
-            <td><button class="deleteButton">Delete</button</td>
-          </tr>
-          <tr>
-            <td>Mac</td>
-            <td>McDonald</td>
-            <td>256</td>
-            <td>Muscle</td>
-            <td>$50,000</td>
-            <td><button class="deleteButton">Delete</button</td>
-          </tr> -->
         </tbody>
         <tfoot>
           <tr>
