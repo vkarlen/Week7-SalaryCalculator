@@ -2,26 +2,17 @@
 
 ## Description
 
-_Duration: 2 Week Sprint_
+_Duration: 2 days_
 
-Your project description goes here. What problem did you solve? How did you solve it?
-
-Directly above this is how long it took you to develop the project. Your project description goes here. What problem did you solve? How did you solve it?
-
-## Screen Shot
-
-Include one or two screen shots of your project here (optional). Remove if unused.
+A calculator to show the total monthly cost of all employees.
 
 ## Usage
 
-How does someone use this application? Tell a user story here.
-
-1. xxx
-2. xxx
-3. xxx
-4. xxx
-5. xxx
-6. xxx
+1. Under "Add Employee" enter all of your employee's information. **All fields are required.**
+2. Click submit. Your employee should now display in the table.
+3. Add each of your employees in this manner. The total monthly cost will update after each entry.
+4. If you make a mistake on an entry or have to let an employee go, click the X button to completely remove them from your list.
+5. If your total monthly cost exceeds the allotted maximum (set in client.js), the total will turn red to alert you.
 
 ## Built With
 
